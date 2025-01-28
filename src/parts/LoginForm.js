@@ -27,6 +27,7 @@ function LoginForm({ history }) {
         setAuthorizationHeader(res.data.token);
         users.details().then((detail) => {
           dispatch(populateProfile(detail.data));
+          console.log("Detail data:", detail.data);
           const production =
           process.env.REACT_APP_FRONTPAGE_URL === "https://micro-rezza.vercel.app"
             ? "Domain = micro-rezza.vercel.app"
