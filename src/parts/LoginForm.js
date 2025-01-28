@@ -28,10 +28,9 @@ function LoginForm({ history }) {
         users.details().then((detail) => {
           dispatch(populateProfile(detail.data));
           const production =
-            process.env.REACT_APP_FRONTPAGE_URL ===
-            "https://micro.buildwithangga.id"
-              ? "Domain = micro.buildwithangga.id"
-              : "";
+          process.env.REACT_APP_FRONTPAGE_URL === "https://micro-rezza.vercel.app"
+            ? "Domain = micro-rezza.vercel.app"
+            : "";
           localStorage.setItem(
             "BWAMICRO:token",
             JSON.stringify({
